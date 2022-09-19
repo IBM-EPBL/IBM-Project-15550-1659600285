@@ -1,0 +1,122 @@
+
+Basic Python
+1. Split this string
+msg = "Hi there Sam!"
+msg.split()
+['Hi', 'there', 'Sam!']
+2. Use .format() to print the following string.
+Output should be: The diameter of Earth is 12742 kilometers.
+planetName = "Earth"
+planetDiameter = 12742
+"The diameter of {} is {} Kilometers.".format(planetName,planetDiameter)
+'The diameter of Earth is 12742 Kilometers.'
+3. In this nest dictionary grab the word "hello"
+dtry = {'k1':[1,2,3,{'tricky':['oh','man','inception',{'target':[1,2,3,'hello']}]}]}
+dtry['k1'][3]['tricky'][3]['target'][3]
+'hello'
+Numpy
+import numpy as np
+4.1 Create an array of 10 zeros?
+4.2 Create an array of 10 fives?
+import numpy as np
+np.zeros(10)
+array([0., 0., 0., 0., 0., 0., 0., 0., 0., 0.])
+import numpy as np
+arr = np.full(10,5 , dtype = 'int')
+print(arr)
+[5 5 5 5 5 5 5 5 5 5]
+5. Create an array of all the even integers from 20 to 35
+import numpy as np
+arr = np.arange(20, 35,2)
+print(arr)
+[20 22 24 26 28 30 32 34]
+6. Create a 3x3 matrix with values ranging from 0 to 8
+import numpy as np
+mat = np.array([[0,1,2],
+                [3,4,5],
+                [6,7,8]])
+print(mat)
+[[0 1 2]
+ [3 4 5]
+ [6 7 8]]
+7. Concatenate arr1 and arr2
+arr1 = np.array([1, 2, 3]), arr2 = np.array([4, 5, 6])
+import numpy as np
+arr1 = np.array([1, 2, 3])
+arr2 = np.array([4, 5, 6])
+concatArr = np.concatenate((arr1,arr2))
+print(concatArr)
+[1 2 3 4 5 6]
+Pandas
+8. Create a dataframe with 3 rows and 2 columns
+import pandas as pd
+import pandas as pd
+data = {'val1': [4,5,6],
+        'val2': [7, 8, 9]}
+dataFrame = pd.DataFrame(data, index=[0,
+                            1,
+                            2])
+print(dataFrame)
+   val1  val2
+0     4     7
+1     5     8
+2     6     9
+9. Generate the series of dates from 1st Jan, 2023 to 10th Feb, 2023
+import pandas as jerish
+dates = jerish.date_range(start ='01-01-2023', 
+         end ='02-10-2023', freq ='24H')
+for date in dates:
+    print(date)
+2023-01-01 00:00:00
+2023-01-02 00:00:00
+2023-01-03 00:00:00
+2023-01-04 00:00:00
+2023-01-05 00:00:00
+2023-01-06 00:00:00
+2023-01-07 00:00:00
+2023-01-08 00:00:00
+2023-01-09 00:00:00
+2023-01-10 00:00:00
+2023-01-11 00:00:00
+2023-01-12 00:00:00
+2023-01-13 00:00:00
+2023-01-14 00:00:00
+2023-01-15 00:00:00
+2023-01-16 00:00:00
+2023-01-17 00:00:00
+2023-01-18 00:00:00
+2023-01-19 00:00:00
+2023-01-20 00:00:00
+2023-01-21 00:00:00
+2023-01-22 00:00:00
+2023-01-23 00:00:00
+2023-01-24 00:00:00
+2023-01-25 00:00:00
+2023-01-26 00:00:00
+2023-01-27 00:00:00
+2023-01-28 00:00:00
+2023-01-29 00:00:00
+2023-01-30 00:00:00
+2023-01-31 00:00:00
+2023-02-01 00:00:00
+2023-02-02 00:00:00
+2023-02-03 00:00:00
+2023-02-04 00:00:00
+2023-02-05 00:00:00
+2023-02-06 00:00:00
+2023-02-07 00:00:00
+2023-02-08 00:00:00
+2023-02-09 00:00:00
+2023-02-10 00:00:00
+10. Create 2D list to DataFrame
+lists = [[1, 'aaa', 22], [2, 'bbb', 25], [3, 'ccc', 24]]
+
+data = [[1, 'aaa', 22], [2, 'bbb', 25], [3, 'ccc', 24]]
+import pandas as pd  
+data = [[1, 'aaa', 22], [2, 'bbb', 25], [3, 'ccc', 24]]  
+dataFrame = pd.DataFrame(data, columns =['number', 'alpha','number']) 
+print(dataFrame )
+   number alpha  number
+0       1   aaa      22
+1       2   bbb      25
+2       3   ccc      24
