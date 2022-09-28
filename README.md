@@ -1,5 +1,5 @@
 ![IBM_LGBT_Logo_RGB1](https://user-images.githubusercontent.com/113326467/192757952-801904f7-27d4-4587-8c48-c99206760fc9.jpg)
-## __IBM-Project-15550-1659600285__
+# __IBM-Project-15550-1659600285__
 ![Eligibility](https://user-images.githubusercontent.com/113326467/192755666-a6103751-b681-4e00-9e29-dfff735c51ed.jpeg)
 ## University Admit Eligibility Predictor
 ##### *__Team Leader - Siva Kumar T__*
