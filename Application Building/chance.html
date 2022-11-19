@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+
+            background-image: url("https://github.com/IBM-EPBL/IBM-Project-15550-1659600285/blob/main/Project%20Development%20Phase/Sprint%202/static/img/chance.png?raw=true");
+            background-size: cover;
+            background-position: 25%;
+
+            background-repeat: no-repeat;
+
+            height: 100vh;
+        }
+      section{
+         /* border:10px solid gray; */
+         height: 90vh;
+
+        position: relative;
+      }
+      .container{
+
+        border:10px solid gray;
+        max-width: 700px;
+        width: 100%;
+        opacity: 0.95;
+
+        height:25vh;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+
+        position: absolute;
+        right: 0;
+        left: 0;
+        top: 0;
+        bottom:60%;
+        margin: auto;
+
+      }
+
+    </style>
+ </head>
+<body>
+
+    <section>
+
+        <div class="container" >
+            <h1> Prediction:{{content}}
+                <br>
+                 You have a Chance </h1>
+        </div>
+    </section>
+
+
+
+
+</body>
+</html>

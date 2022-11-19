@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <SCRIPT language=Javascript>
+
+
+  </SCRIPT>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color:brown;
+  background-image: url("https://github.com/IBM-EPBL/IBM-Project-15550-1659600285/blob/main/Project%20Development%20Phase/Sprint%202/static/img/index.png?raw=true");
+  background-size:cover;
+  padding: 20px 0 30px 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* style the container */
+.container {
+  position: relative;
+  border-radius: 5px;
+  margin-left: 8%;
+
+}
+
+/* style inputs and link buttons */
+input,
+.btn {
+  width: 200%;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  background-color: #d3d3d3;
+  margin: 5px 0;
+  opacity: 0.85;
+  display: inline-block;
+  font-size: 17px;
+  line-height: 20px;
+  text-decoration: none;
+}
+
+
+input:hover,
+.btn:hover {
+  opacity: 1;
+}
+
+li{
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color:black;
+}
+
+
+/* style the submit button */
+input[type=submit] {
+  background-color: #000000;
+  color:yellow;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #151615;
+}
+
+/* Two-column layout */
+.col {
+  float: left;
+  width: 50%;
+  margin: auto;
+  padding: 0 50px;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+
+/* hide some text on medium and large screens */
+.hide-md-lg {
+  display: none;
+}
+
+/* bottom container */
+.bottom-container {
+  text-align: center;
+  opacity: 0.90;
+  border-radius: 0px 0px 4px 4px;
+}
+
+/* Responsive layout - when the screen is less than 650px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 650px) {
+  .col {
+    width: 100%;
+    margin-top: 0;
+  }
+  /* hide the vertical line */
+  .vl {
+    display: none;
+  }
+  /* show the hidden text on small screens */
+  .hide-md-lg {
+    display: block;
+    text-align: center;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <form action="{{url_for('predict')}}" method="post">
+    <div class="row">
+      <marquee class="bottom-container"><h2>ASSSS Admits - If studying abroad is your dream, making it simple is ours!</h2></marquee>
+      <div class="vl">
+        <span class="vl-innertext"></span>
+      </div>
+
+
+      <div class="col">
+        <div class="hide-md-lg">
+        </div>
+
+			<input type="number" name="GRE Score" placeholder="GRE Score(out of 340)" required="required" min="0" max="340"/>
+			<input type="number" name="TOEFL Score" placeholder="TOEFL Score(out of 120)" required="required" min="0" max="120"/>
+			<input type="number" name="University Rating" placeholder="University Rating(out of 5)" required="required" min="1" max="5"/>
+			<input type="number" name="SOP" placeholder="SOP(out of 5)" required="required" onkeypress="return check(event,value)" step="0.1" min="1" max="5"/>
+			<input type="number" name="LOR" placeholder="LOR(out of 5)" required="required" onkeypress="return check(event,value)" step="0.1" min="1" max="5"/>
+			<input type="number" name="CGPA" placeholder="CGPA(out of 10)" required="required" onkeypress="return check(event,value)" step="0.01" min="1" max="10"/>
+			<input type="number" name="Research" placeholder="Research(1=Yes or 0=No)" required="required" min="0" max="1"/>
+
+			<input type="submit" value="Predict"></input>
+
+      </div>
+
+    </div>
+  </form>
+
+</div>
+
+
+</body>
+</html>
